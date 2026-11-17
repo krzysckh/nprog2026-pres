@@ -1,0 +1,7 @@
+ltximg/*
+.gdb_history
+*.tex
+temp
+*.pl
+*.~undo-tree~
+*.pdf
