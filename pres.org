@@ -1,12 +1,12 @@
 # -*- org-confirm-babel-evaluate: nil -*-
 #+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
 #+options: author:t broken-links:nil c:nil creator:nil
-#+options: d:(not "LOGBOOK") date:t e:t email:nil expand-links:t f:t
+#+options: d:(not "LOGBOOK") date:t e:t email:t expand-links:t f:t
 #+options: inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
 #+options: tasks:t tex:t timestamp:t title:t toc:t todo:t |:t
 #+title: Przeciętne edytory tekstu i Emacs
 #+subtitle: konfiguracja, wtyczki i ergonomia
-#+date: <2026-11-16 pon>
+#+date: <2026-11-12 czw>
 #+author: kpm
 #+email: kpm@lp0.pl
 #+language: pl
@@ -22,12 +22,12 @@
 #+latex_header: \usetikzlibrary{arrows.meta,decorations,decorations.pathreplacing}
 
 * Wstęp
+** Wstęp
 ** Edytor tekstu a IDE
 - *Edytor tekstu*: lekki, uniwersalny, rozbudowywany wtyczkami
 - *IDE*: zintegrowane środowisko dla jednego języka/ekosystemu (IntelliJ, Visual Studio, Borland TurboXYZ, Delphi)
 
-* Co mają wspólnego vscode, (neo)vim i Emacs
-** Wspólna architektura
+** Co mają wspólnego vscode, (neo)vim i Emacs
 - Mały rdzeń + system rozszerzeń
 - Konfiguracja jest /kodem lub danymi/, a nie klikaniem w menu
 - Wszystko da się przypisać do skrótu klawiszowego
@@ -51,6 +51,7 @@
 | Paleta poleceń       | ~Ctrl+Shift+P~  | ~Esc : TAB~                                    | ~M-x~                               |
 
 * Konfiguracja
+** Konfiguracja
 **  Globalna (i per użytkownik): nawyki, skróty, koloryt (motyw),
 - vscode: raczej wyklikiwane w gui, ale plik konfiguracyjny to =~/.config/Code/User/settings.json=
 - (neo)vim: =/etc/vimrc=, =~/.vimrc=, =~/.vim/pack=
@@ -144,6 +145,7 @@ dobrze by zachowali w miarę ten sam styl pisania kodu.
 - pilnować, żeby edytor startował szybko (opcjonalne)
 
 * Wtyczki
+** Wtyczki / pluginy / pakiety
 ** ekosystem
 - menedżer pakietów: instaluje wtyczki i zależności, aktualizuje, blokuje wersje
 - bezpieczeństwo: wtyczka to *cudzy kod* z pełnym dostępem do plików
@@ -290,7 +292,7 @@ tramp - prezentacja praktyczna
 - org babel wykonuje bloki kodu w wielu językach i wkleja wynik do dokumentu
 - dzięki babelowi można żąglować danymi między językami
 
-** babel i org mode - przykład
+** babel i org modE - przykład
 #+NAME: liczby
 #+BEGIN_SRC elisp :exports both
   (mapcar #'1+ (number-sequence 1 5))
